@@ -1,40 +1,23 @@
-var footballBtn = document.getElementById("footballBtn");
-var basketballBtn = document.getElementById("basketballBtn");
-var volleyballBtn = document.getElementById("volleyballBtn");
-var content1 = document.getElementById("content1");
-var content2 = document.getElementById("content2");
-var content3 = document.getElementById("content3");
+const buttons = document.querySelectorAll("[id^='memberBtn']");
+const contents = document.querySelectorAll("[id^='content']");
 
-function openFootball() {
-    content1.style.transform = "translateX(0)";
-    content2.style.transform = "translateX(100%)";
-    content3.style.transform = "translateX(100%)";
-    footballBtn.style.color = "#12cdfc";
-    basketballBtn.style.color = "#000";
-    volleyballBtn.style.color = "#000";
-    content1.style.transitionDelay = "0.3";
-    content2.style.transitionDelay = "0";
-    content3.style.transitionDelay = "0";
+function openMember(index) {
+    contents.forEach((content, i) => {
+        if (i < index) {
+            content.style.transform = "translateX(-100%)"; // Move left
+        } else if (i === index) {
+            content.style.transform = "translateX(0)"; // Stay in view
+        } else {
+            content.style.transform = "translateX(100%)"; // Move right
+        }
+        content.style.transitionDelay = i === index ? "0.3s" : "0";
+    });
+
+    buttons.forEach((btn, i) => {
+        btn.style.color = i === index ? "#12cdfc" : "#000"; // Highlight active button
+    });
 }
-function openBasketball() {
-    content1.style.transform = "translateX(-100%)";
-    content2.style.transform = "translateX(0)";
-    content3.style.transform = "translateX(100%)";
-    footballBtn.style.color = "#000";
-    basketballBtn.style.color = "#12cdfc";
-    volleyballBtn.style.color = "#000";
-    content1.style.transitionDelay = "0";
-    content2.style.transitionDelay = "0.3";
-    content3.style.transitionDelay = "0";
-}
-function openVolleyball() {
-    content1.style.transform = "translateX(-100%)";
-    content2.style.transform = "translateX(-100%)";
-    content3.style.transform = "translateX(0)";
-    footballBtn.style.color = "#000";
-    basketballBtn.style.color = "#000";
-    volleyballBtn.style.color = "#12cdfc";
-    content1.style.transitionDelay = "0";
-    content2.style.transitionDelay = "0";
-    content3.style.transitionDelay = "0.3";
-}
+
+buttons.forEach((button, i) => {
+    button.addEventListener("click", () => openMember(i));
+});
