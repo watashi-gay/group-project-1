@@ -1,12 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0; url=implementation.html">
-    <title>Redirecting...</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <p>If you are not redirected automatically, <a href="implementation.html">click here</a>.</p>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="implementation-style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+        <script src="implementation.js" defer></script>
+        <title>Implementation</title>
+    </head>
+    <body>
+        <div class="implement">
+            <div class="implementation-bar">
+                <button id="memberBtn1" onclick="openMem1()">
+                    <i class="fa-solid fa-user"></i>
+                    Hồ Duy Phú
+                </button>
+                <button id="memberBtn2" onclick="openMem2()">
+                    <i class="fa-solid fa-user"></i>
+                    Đinh Văn Son
+                </button>
+                <button id="memberBtn3" onclick="openMem3()">
+                    <i class="fa-solid fa-user"></i>
+                    Nguyễn Thị Thủy Linh
+                </button>
+                <button id="memberBtn4" onclick="openMem4()">
+                    <i class="fa-solid fa-user"></i>
+                    Cao Sơn Hào
+                </button>
+                <button id="memberBtn5" onclick="openMem5()">
+                    <i class="fa-solid fa-user"></i>
+                    Hoàng Minh Long
+                </button>
+            </div>
+
+            <div class="implementation-content" id="content1">
+                <div class="content-left">
+                    <h1>Hồ Duy Phú</h1>
+                    <p>Group leader, tasked himself to do implementation tab</p>
+                </div>
+                <div class="content-right">
+                    <img src="pfp/181534645.gif" class="hover-img" alt="Hover Image">
+                </div>
+            </div>
+            <div class="implementation-content" id="content2">
+                <div class="content-left">
+                    <h1>Đinh Văn Son</h1>
+                    <p>Tasked to do group diary</p>
+                </div>
+                <div class="content-right">
+                    <img src="pfp/anh-avatar-anime.jpg" class="hover-img" alt="Hover Image">
+                </div>
+            </div>
+            <div class="implementation-content" id="content3">
+                <div class="content-left">
+                    <h1>Nguyễn Thị Thủy Linh</h1>
+                    <p>Tasked to do log in/register page</p>
+                </div>
+                <div class="content-right">
+                    <img src="pfp/464241159_1968575900314859_7288426222998435926_n.jpg" class="hover-img" alt="Hover Image">
+                </div>
+            </div>
+            <div class="implementation-content" id="content4">
+                <div class="content-left">
+                    <h1>Cao Sơn Hào</h1>
+                    <p>Tasked to do requirement page</p>
+                </div>
+                <div class="content-right">
+                    <img src="pfp/SHào.jpg" class="hover-img" alt="Hover Image">
+                </div>
+            </div>
+            <div class="implementation-content" id="content3">
+                <div class="content-left">
+                    <h1>Hoàng Minh Long</h1>
+                    <p>Tasked to do design page</p>
+                </div>
+                <div class="content-right">
+                    <img src="pfp/Gone-Fishing.jfif" class="hover-img" alt="Hover Image">
+                </div>
+            </div>
+        </div>
+        <footer>Created by Hồ Duy Phú</footer>        
+    </body>
 </html>
