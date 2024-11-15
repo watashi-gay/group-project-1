@@ -41,6 +41,7 @@ body {
 }
 
 .implementation-content{
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -62,14 +63,15 @@ body {
     text-align: center;
 }
 .content-right img {
-    width: 500px;
-    height: 350px;
+    width: 250px;
+    height: 250px;
+    border: 1px #000 solid;
 }
 
 #content1 {
     transform: translateX(0);
 }
-#footballBtn {
+#memberBtn1 {
     color: #12cdfc;
 }
 
